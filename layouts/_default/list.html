@@ -1,0 +1,18 @@
+{{ partial "head" . }}
+
+<div class="main">
+  {{ partial "menu" . }}
+  <div class="content">
+	{{ partial "breadcrumb" . }}
+
+	{{ .Content }}
+	<h1>In this chapter</h1>
+	{{ range .Pages }}
+	<ul>
+	  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	</ul>
+	{{ end }}
+  </div>
+</div>
+
+{{ partial "footer"}}

@@ -1,0 +1,13 @@
+{{ partial "head" . }}
+
+<div class="main">
+  {{ partial "menu" .}}
+  <div class="content">
+	{{ partial "breadcrumb" . }}
+
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
+  </div>
+</div>
+
+{{partial "footer" }}

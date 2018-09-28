@@ -1,0 +1,17 @@
+{{ partial "head" . }}
+<div class="top-banner">
+	  <div>
+		<h1>Gin Gonic</h1>
+	  <p>The fastest full-featured web framework for Golang. Crystal clear.</p>
+	  <div>
+		<a href="https://github.com/gin-gonic/gin">Github page</a>
+		{{ range .Pages }}
+		{{ if eq .Title "Documentation"}}
+		<a href="{{ .Permalink}}">Docs reference</a>
+		{{ end }}
+		{{ end }}
+	  </div>
+	  </div>
+	</div>
+	<div>{{ .Name }}</div>
+{{ partial "footer" }}
