@@ -1,3 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Gin Web Framework"
+
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
