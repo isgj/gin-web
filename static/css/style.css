@@ -169,3 +169,32 @@ html, body {
 	min-width: 70%;
 	padding: 15px;
 }
+
+.menu-header {
+	display: flex;
+	align-content: center;
+	height: 15vh;
+	border-bottom: 1px solid #999;
+	padding-bottom: 5px;
+	border-radius: 6px;
+}
+
+.menu-header>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.menu-header>div:first-child {
+	width: 40%;
+}
+
+.menu-header iframe {
+	margin-top: 5px;
+}
+
+.menu-header img {
+	height: 100%;
+	width: auto;
+}
