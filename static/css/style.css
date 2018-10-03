@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
 }
 
 html, body {
@@ -30,11 +32,65 @@ html, body {
 
 .menu {
 	padding: 10px;
+	width: 20vw;
+	height: 100vh;
+	background-color: #eee;
 }
 
 .menu.links {
 	display: flex;
 	flex-direction: column;
+}
+
+.links>ul {
+	padding-left: 10px;
+}
+
+.links>ul ul {
+	padding-left: 20px;
+	transition: all .3s ease;
+	overflow: hidden;
+}
+
+.menu-link {
+	color: #202020;
+}
+
+.menu-entry {
+	padding: 6px 10px;
+	transition: all .3s ease;
+}
+
+.menu-entry:hover {
+	background-color: #d5d5d5;
+	border-radius: 4px;
+	transform: translateX(2px);
+}
+
+.active {
+	border-left-width: 4px;
+	border-left-style: solid;
+	border-left-color: #999;
+}
+
+.links span {
+	display: inline-block;
+	float: right;
+	border: solid #8f8f8f;
+	border-width: 0 4px 4px 0;
+	padding: 6px;
+	border-radius: 3px;
+	transition: all .3s ease;
+}
+
+.up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+}
+
+.down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 
 .breadcrumb {
@@ -112,4 +168,33 @@ html, body {
 .content {
 	min-width: 70%;
 	padding: 15px;
+}
+
+.menu-header {
+	display: flex;
+	align-content: center;
+	height: 15vh;
+	border-bottom: 1px solid #999;
+	padding-bottom: 5px;
+	border-radius: 6px;
+}
+
+.menu-header>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.menu-header>div:first-child {
+	width: 40%;
+}
+
+.menu-header iframe {
+	margin-top: 5px;
+}
+
+.menu-header img {
+	height: 100%;
+	width: auto;
 }

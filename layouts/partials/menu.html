@@ -1,16 +1,29 @@
+{{ $currentPage := . }}
 <div class="menu">
+  {{ partial "menu_header" }}
   <div class="links">
+	<ul>
 	{{ range .Site.Pages }}
 	{{ if (and (not .IsHome) (eq .Parent .Site.Home)) }}
-	<div>
-	  <a href="{{ .Permalink }}">{{ .Title }}</a>
-	  {{ range .Pages }}
-	  <ul>
-		<li> <a href="{{ .Permalink }}">{{ .Title }}</a> </li>
-	  </ul>
+	<li>
+	  <div class="menu-entry {{if eq $currentPage . }} active {{ end }}">
+		<a href="{{ .Permalink }}" class="menu-link">{{ .Title }}</a>
+	  {{ $parentPage := . }}
+	  {{ with .Pages}}
+	  <span class="{{if hasPrefix $currentPage.Permalink $parentPage.Permalink }}up{{else}}down{{end}}"></span></div>
+	  <ul {{if not (hasPrefix $currentPage.Permalink $parentPage.Permalink) }}hidden{{end}}>
+	  {{ range . }}
+	  <li class="menu-entry {{if eq $currentPage . }} active {{ end }}">
+		<a href="{{ .Permalink }}" class="menu-link">{{ .Title }}</a>
+	  </li>
 	  {{ end }}
-	</div>
+	  </ul>
+	  {{ else}}
+	  </div>
+	  {{ end }}
+	</li>
 	{{ end }}
 	{{ end }}
+	</ul>
   </div>
 </div>
