@@ -1,5 +1,6 @@
 ---
 title: "Parameters in path"
+weight: 10
 ---
 Here is an example that shows how to use path parameters
 

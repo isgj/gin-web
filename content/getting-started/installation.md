@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 date: 2018-09-25T16:57:20+02:00
-draft: false
+weight: 1
 ---
 
 To install Gin package, you need to install Go and set your Go workspace first.
