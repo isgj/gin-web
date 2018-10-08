@@ -144,6 +144,6 @@ Date: {[{.now | formatAsDate}]}
 ```
 
 Result:
-```
+```bash
 Date: 2017/07/01
 ```

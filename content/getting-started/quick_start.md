@@ -27,7 +27,7 @@ func main() {
 ```
 
 You can run the server like so
-```
+```bash
 $ go run example.go
 ```
 and visit `0.0.0.0:8080/ping` on your browser.

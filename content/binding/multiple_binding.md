@@ -50,11 +50,11 @@ func SomeHandler(c *gin.Context) {
 }
 ```
 
-- `c.ShouldBindBodyWith` stores body into the context before binding. This has
+<div class="info"> `c.ShouldBindBodyWith` stores body into the context before binding. This has
 a slight impact to performance, so you should not use this method if you are
-enough to call binding at once.
+enough to call binding at once.</div>
 
-- This feature is only needed for some formats -- `JSON`, `XML`, `MsgPack`,
+<div class="info">This feature is only needed for some formats -- `JSON`, `XML`, `MsgPack`,
 `ProtoBuf`. For other formats, `Query`, `Form`, `FormPost`, `FormMultipart`,
 can be called by `c.ShouldBind()` multiple times without any damage to
-performance (See [#1341](https://github.com/gin-gonic/gin/pull/1341)).
+performance (See [#1341](https://github.com/gin-gonic/gin/pull/1341)).</div>
