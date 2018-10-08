@@ -2,6 +2,7 @@
 title: "Testing"
 date: 2018-09-25T16:57:20+02:00
 draft: false
+weight: 100
 ---
 
 The `net/http/httptest` package is preferable way for HTTP testing.

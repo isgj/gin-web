@@ -1,5 +1,6 @@
 ---
 title: "Vendoring"
+weight: 10
 ---
 
 1. `go get` govendor

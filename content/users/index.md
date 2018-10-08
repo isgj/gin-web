@@ -1,5 +1,6 @@
 ---
 title: "Show cases"
+weight: 120
 ---
 Awesome project lists using [Gin](https://github.com/gin-gonic/gin) web framework.
 

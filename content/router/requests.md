@@ -1,5 +1,6 @@
 ---
-title: "Request"
+title: "Using HTTP methods"
+weight: 1
 ---
 
 Using GET, POST, PUT, PATCH, DELETE and OPTIONS
